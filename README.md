@@ -1,4 +1,4 @@
-# BLEACH Arena v9.1.1 — GitHub / Vercel 專案
+部署# BLEACH Arena v9.1.1 — GitHub / Vercel 專案
 
 **部署新網站請先閱讀 [MIGRATION_GITHUB_VERCEL.md](MIGRATION_GITHUB_VERCEL.md)**。這份來源包含 v9.1.1 規則修補，`dist/` 是靜態網站根目錄；`npm test` 執行 110 項回歸測試。
 
