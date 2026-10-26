@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "dist",
+  "git": {
+    "deploymentEnabled": {
+      "**": false,
+      "main": true
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/universal-v2-preview.html"
+    }
+  ]
+}
