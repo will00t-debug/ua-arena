@@ -255,12 +255,12 @@ export function dispatchAccount(repos,message,now){
   }
   case 'login':{
    const username=parseUsername(message.username);
-   const password=parsePassword(message.password));
+   const password=parsePassword(message.password);
    const key=usernameKey(username);
    const ip=String(message.ip||'local').slice(0,80);
    if(lockedOut(repos,ip,key,now))throw new ApiError(429,'嘗試次數太多，請稍後再登入。');
    const user=repos.findUserByKey(key);
-   const matches=passwordMatches(password,user?user.password:dummyHash();
+   const matches=passwordMatches(password,user?user.password:dummyHash());
    if(!user||!matches){
     repos.noteFailure(ip+'\n'+key,now,LOGIN_WINDOW_MS);
     throw new ApiError(401,'帳號或密碼不正確。');
